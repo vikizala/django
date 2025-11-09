@@ -1,0 +1,24 @@
+{% extends 'main/loyaut.html' %}
+
+{% block title%}Новости о котиках{% endblock %}
+
+{% block content %}
+    <div class="news_div3">
+        <h1>Sale ket</h1>
+        {% if sale_kats %}
+            {% for el in sale_kats %}
+                <div class="news">
+                    <img src="{{ product.image.url }}" alt="{{ article.titel }}">
+                    <h1>{{ el.titel }}</h1>
+                    <h3>{{el.anons }}</h3>
+                    <p>{{ el.full_text }}</p>
+                    <p>{{ el.date }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <h1>Записей нет</h1>
+        {% endif %}
+    </div>
+
+{% endblock %}
+
