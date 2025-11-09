@@ -1,0 +1,2 @@
+# django
+Django test app
